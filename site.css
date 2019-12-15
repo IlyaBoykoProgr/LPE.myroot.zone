@@ -1,0 +1,28 @@
+@keyframes show {
+	from{transform:scale(0.4) rotateX(50deg)}
+	60%{transform:rotateX(-40deg);}
+	80%{transform:rotateX(30deg);}
+	to{transform:none;}
+}
+
+h1,h2{
+	animation: 1s show; transform-origin: 50% 0%;
+}h3,h4,h5,h6{
+	animation:1.5s show;transform-origin: 50% 0%;
+}
+body{
+	background: linear-gradient(#44D1FF,#B5E3F2,#44D1FF);
+}
+
+@keyframes move-show{
+	from{opacity:0.1;position:relative;right:30px}
+	to{opacity:1;position:relative;right:0px}
+}
+a,li{
+	animation: 1s move-show;
+	transition:200ms;
+}
+li:hover{box-shadow: 2px 2px 3px 3px #1E90FF;}
+a:hover{color:green;padding-left:10px}
+
+noscript{color:red;}

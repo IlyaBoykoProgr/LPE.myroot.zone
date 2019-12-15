@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="keywords" content="с нуля,учить,уроки,LPE,lpe"/>
+		<link href="site.css" rel="stylesheet"/>
+		<link rel="icon" href="./favicon.ico"/>
+		<script src="https://code.jquery.com/jquery-3.0.0.min.js"> </script>
+		<title>LPE - learn programming easy!</title>
+	</head>
+	<body style="display:none;">
+		<iframe height="66px" width="100%" src="header.html"></iframe>
+		<h1>Добро пожаловать!</h1>
+		<h3>Если хотите начать разрабатывать с нуля - вам сюда!</h5>
+		<ul>Программирование:
+		<li> <a href="./cpp">Уроки С++</a></li>
+		<li> <a href="./java">Уроки Java</a></li>
+		<li> <a href="./java">Уроки </a></li>
+		Сайты:
+		<li><a href="./php">Уроки PHP</a></li>
+		<li><a href="./js">Уроки JavaScript</a>
+			<ul><li><a href="./js/jquery">Уроки/Справочник jQuery</a></li></ul>
+		</li>
+		<li><a href="./html">Справочник HTML</a></li>
+		<li><a href="./css">Справочник CSS</a></li>
+		</ul>
+		<script>
+			$("body").slideDown(6000);;
+			document.body.onbeforeunload=function(){
+					$("body").slideUp(300);
+			};
+			$("h1").click(function(){
+					$(this).animate({paddingTop:"+=50px"}).animate({paddingTop:"-=50px"});
+			});
+		</script>
+	</body>
+</html>
