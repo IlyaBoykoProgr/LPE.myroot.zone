@@ -8,24 +8,25 @@
 		<script src="https://code.jquery.com/jquery-3.0.0.min.js"> </script>
 		<title>LPE - learn programming easy!</title>
 	</head>
+	<iframe height="66px" width="100%" src="header.html"></iframe>
 	<body style="display:none;">
-		<iframe height="66px" width="100%" src="header.html"></iframe>
 		<h1>Добро пожаловать!</h1>
 		<h3>Если хотите начать разрабатывать с нуля - вам сюда!</h5>
 		<ul>Программирование:
-		<li> <a href="./cpp">Уроки С++</a></li>
-		<li> <a href="./java">Уроки Java</a></li>
-		<li> <a href="./java">Уроки </a></li>
-		Сайты:
-		<li><a href="./php">Уроки PHP</a></li>
-		<li><a href="./js">Уроки JavaScript</a>
-			<ul><li><a href="./js/jquery">Уроки/Справочник jQuery</a></li></ul>
+		<li> <a href="./cpp/index.html">Уроки С++</a>
+			<ul><li><a href="./cpp/winlib/index.html">Моя собственная библиотека(для Windows)</a></li></ul>
 		</li>
-		<li><a href="./html">Справочник HTML</a></li>
-		<li><a href="./css">Справочник CSS</a></li>
+		<li> <a href="./java/index.html">Уроки Java</a></li>
+		Сайты:
+		<li><a href="./php/index.html">Уроки PHP</a></li>
+		<li><a href="./js/index.html">Уроки JavaScript</a>
+			<ul><li><a href="./js/jquery/index.html">Уроки/Справочник jQuery</a></li></ul>
+		</li>
+		<li><a href="./html/index.html">Справочник HTML</a></li>
+		<li><a href="./css/index.html">Справочник CSS</a></li>
 		</ul>
 		<script>
-			$("body").slideDown(6000);;
+			$("body").slideDown(6000);
 			document.body.onbeforeunload=function(){
 					$("body").slideUp(300);
 			};
@@ -34,4 +35,14 @@
 			});
 		</script>
 	</body>
+	<footer>
+		Создатель сайта:<br/>
+		<a href="http://github.com/IlyaBoykoProgr">На github</a>
+		<a href="https://web.telegram.org/#/im?p=@IllyaBoykoProgr">В telegram</a>
+		<a href="https://vk.com/illya.boyko">Во ВКонтакте</a>
+		<br/> Спасибо за посещение этого сайта!
+		<script>
+			$("footer").css("padding","500px").animate({"padding":"0px"},800);
+		</script>
+	</footer>
 </html>
