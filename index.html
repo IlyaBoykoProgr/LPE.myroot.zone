@@ -4,6 +4,7 @@
 		<meta charset="UTF-8"/>
 		<meta name="keywords" content="с нуля,учить,уроки,LPE,lpe"/>
 		<link href="site.css" rel="stylesheet"/>
+		<link rel="icon" href="./favicon.ico"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://vk.com/js/api/openapi.js?162"></script>
 		<title>LPE - learn programming easy!</title>
@@ -42,5 +43,10 @@
 		<a href="https://web.telegram.org/#/im?p=@IllyaBoykoProgr">В telegram</a>
 		<!--<a href="https://vk.com/IlyaBoykoProgr">Во ВКонтакте</a>-->
 		<br/> Спасибо за посещение этого сайта!
+		<div id="vk_comments"></div>
+		<script>
+			VK.init({apiId: 1000, onlyWidgets: true});
+			VK.Widgets.Comments("vk_comments", {limit: 50, attach: "*"});
+		</script>
 	</footer>
 </html>
