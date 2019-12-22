@@ -4,12 +4,12 @@
 		<meta charset="UTF-8"/>
 		<meta name="keywords" content="с нуля,учить,уроки,LPE,lpe"/>
 		<link href="site.css" rel="stylesheet"/>
-		<link rel="icon" href="./favicon.ico"/>
-		<script src="https://code.jquery.com/jquery-3.0.0.min.js"> </script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://vk.com/js/api/openapi.js?162"></script>
 		<title>LPE - learn programming easy!</title>
 	</head>
-	<iframe height="66px" width="100%" src="header.html"></iframe>
-	<body style="display:none;">
+	<header><script>$("header").load("http://lpe.myroot.zone/header.html");</script></header>
+	<body>
 		<h1>Добро пожаловать!</h1>
 		<h3>Если хотите начать разрабатывать с нуля - вам сюда!</h5>
 		<ul>Программирование:
@@ -26,7 +26,7 @@
 		<li><a href="./css/index.html">Справочник CSS</a></li>
 		</ul>
 		<script>
-			$("body").slideDown(6000);
+			$("body").slideUp(1).slideDown(6000);
 			document.body.onbeforeunload=function(){
 					$("body").slideUp(300);
 			};
@@ -40,10 +40,7 @@
 		Создатель сайта:<br/>
 		<a href="http://github.com/IlyaBoykoProgr">На github</a>
 		<a href="https://web.telegram.org/#/im?p=@IllyaBoykoProgr">В telegram</a>
-		<a href="https://vk.com/IllyaBoykoProgr">Во ВКонтакте</a>
+		<!--<a href="https://vk.com/IlyaBoykoProgr">Во ВКонтакте</a>-->
 		<br/> Спасибо за посещение этого сайта!
-		<script>
-			$("footer").css("padding","500px").animate({"padding":"0px"},800);
-		</script>
 	</footer>
 </html>
