@@ -13,10 +13,13 @@
 		<h3>Уроки по моей библиотеке Windows
 			<a href="./winlib/index.html">тут</a>
 		</h3>
+		<h3>Абсолютно все уроки 
+			<a href="../index.html">тут</a>
+		</h3>
 		<label>Перейти к уроку №<input type="number" id="lesson" min="0" max="99"/></label>
 		<button id="move">Ок</button><br>
 		<script>
-			for(var i=0;i<3;i++){
+			for(var i=0;i<4;i++){
 				var a=$("<a href='lesson"+i+".html' id='a"+i+"'></a>").html("Урок №"+i);
 				a.css("paddingLeft",i<10?"27px":"20px");
 				$("body").append(a);
@@ -28,5 +31,6 @@
 				a.show();
 			});
 		</script>
+		
 	</body>
 </html>

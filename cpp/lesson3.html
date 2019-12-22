@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="keywords" content="с нуля,учить,уроки,LPE,lpe,c++,с++"/>
+		<link href="../site.css" rel="stylesheet"/>
+		<script src="https://code.jquery.com/jquery-3.0.0.min.js"> </script>
+		<title>LPE - learn c++ easy!</title>
+	</head>
+	<header><script>$("header").load("http://lpe.myroot.zone/header.html");</script></header>
+	<body>
+		<h1>Урок C++ №3</h1>
+		<h2>В этом уроке вы узнаете о</h2>
+		<h3>переменных и вводе std::cin</h3>
+		Вы прочитали название урока и скорее всего удивились. Как переменные величины могут быть в компьютере? Но переменныые в программировании значат совсем другое.<br>
+		<b>Переменные</b>- это своеобразные контейнеры, в которые вы можете поместить что-нибудь свое.<br>
+		Это ящики, содержащие любые значения, которые потом программист может использовать в дальнейшем.<br>
+		Засунуть в переменную значение надо так:
+		
+		<blockquote><ol><li>переменная&nbsp;<font color="#000080">=</font>&nbsp;значение<font color="#008080">; <-точку с запятой не забыли</font></li></ol></blockquote>
+		
+		Чтобы получить значение из переменной, достаточно написать ее имя.<br>
+		Но мы не сможем засунуть хлеб в банку молока, или колбасу в чашку.<br>
+		Переменные в С++ тоже разные, и надо в коде указывать какие они:
+		
+		<blockquote><font color="#0000ff">int</font>&nbsp;целое_число<font color="#008080">;</font><br/>
+<font color="#0000ff">float</font>&nbsp;нецелое_число<font color="#008080">;</font><br/>
+<font color="#0000ff">char</font>&nbsp;символ<font color="#008080">; <-кстати символы пишут в таких ' ' кавычках</font><br/>
+<font color="#0000ff">char[100]</font>&nbsp;строка со 100 символами<font color="#008080">; <-помните, строки указываются в этих " " кавычках</font><br/>
+и&nbsp;т.д.</blockquote>
+
+		Это значит, что нельзя сказать
+		
+		<blockquote><font color="#0000ff">int</font>&nbsp;chislo<font color="#008080">;</font><br/>
+chislo<font color="#000080">=</font>&nbsp;<font>0.34</font><font color="#008080">;</font></blockquote>
+		
+		Дело в том, что int значит целую переменную, а мы присваиваем ей дробное число.
+		Компьютер на это махнет рукой и приведет 0.34 к целому числу 0. Программа конечно сможет работать неправильно.<br>
+		<b>Итак,</b> для обьявления переменной нужно написать ее тип и название. Чтобы присвоить переменной значение нужно написать имя переменной, = и значение.
+		<h3>Ввод переменных пользователем, std::cin</h3>
+		<b>std::cin</b> - штука, обратная std::cout.
+		Если cout выводит на экран, то cin вводит.
+		Даже скобочки std::cout<<  меняются на  std::cin>>. <br>
+		std:: сразу значит, что cin из библиотеки iostream. <small>Да это вообще единственная библиотека, которую вы знаете.</small><br>
+		Чтобы взять с помощью cin ввод, нужна переменная. Это так:
+		
+		<blockquote><ol><li><font color="#339900">#include&lt;iostream&gt; <-обязательно!</font></li>
+		<li>&nbsp;</li><li><font color="#0000ff">int</font>&nbsp;main<font color="#008000">&#40;</font><font color="#008000">&#41;</font><font color="#008000">&#123; <-хмм, int ничего не напоминает?</font></li>
+		<li>&nbsp;тип&nbsp;переменная<font color="#008080">; <-переменную нужно указать<small>(объявить)</small></font></li>
+		<li>&nbsp;std<font color="#008080">::</font><font color="#0000dd">cin</font><font color="#000080">&gt;&gt;</font>переменная<font color="#008080">;</font></li><li><font color="#008000">&#125;</font></li></ol></blockquote>
+		
+		В итоге этой программы мы получим в переменной то, что указал пользователь.<br>
+		Давайте запросим имя пользователя и сделаем ему приветствие. Попробуйте сами скомпилировать этот код:
+		
+		<blockquote><ol><li><font color="#339900">#include&lt;iostream&gt;</font></li><li>&nbsp;</li>
+		<li><font color="#0000ff">int</font>&nbsp;main<font color="#008000">&#40;</font><font color="#008000">&#41;</font><font color="#008000">&#123;</font></li>
+		<li>&nbsp;<font color="#0000ff">char</font>&nbsp;name[50]<font color="#008080">;</font></li>
+		<li>&nbsp;std<font color="#008080">::</font><font color="#0000dd">cout</font><font color="#000080">&lt;&lt;</font><font color="#FF0000">&quot;What's&nbsp;your&nbsp;name?&quot;</font><font color="#008080">;</font></li>
+		<li>&nbsp;std<font color="#008080">::</font><font color="#0000dd">cin</font><font color="#000080">&gt;&gt;</font>name<font color="#008080">;</font></li>
+		<li>&nbsp;std<font color="#008080">::</font><font color="#0000dd">cout</font><font color="#000080">&lt;&lt;</font><font color="#FF0000">&quot;Hello,&nbsp;&quot;</font><font color="#000080">&lt;&lt;</font>name<font color="#000080">&lt;&lt;</font><font color="#FF0000">&quot;!&quot;</font><font color="#008080">;</font></li>
+		<li><font color="#008000">&#125;</font></li></ol></blockquote>
+		
+		<img src="./lesson3pic1.png"/>Код работает отлично!<br>
+		Одна проблема: немного некрасиво выглядит. Допустим, мы не хотим чтобы ввод имени был на одной строке с вопросом.
+		 Для переноса строки в c++ есть свой особенный символ '\n'.<br>
+		<small>Вместо него можно использовать std::endl, но выглядит это громоздко</small><br>
+		Эту задачу я оставляю вам. На этом мой урок подходит к концу.
+	</body>
+	<footer>
+		<hr>
+		<a href="./lesson.html"><< Предыдущий урок</a>
+		<a href="./lesson.html">Следующий урок>></a>
+		<br><a href="./index.html">Все уроки</a>
+	</footer>
+</html>
