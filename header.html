@@ -25,7 +25,7 @@
 			webvisor:true
 		});
 		document.onload=function(){
-			$("footer").append('<div id="vk_comments"></div>');
+			$("body").append('<div id="vk_comments"></div>');
 			VK.init({apiId: 1000, onlyWidgets: true});
 			VK.Widgets.Comments("vk_comments", {limit: 50, attach: "*"});
 		};
