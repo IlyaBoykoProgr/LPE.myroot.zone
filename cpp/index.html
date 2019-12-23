@@ -7,7 +7,7 @@
 		<script src="https://code.jquery.com/jquery-3.0.0.min.js"> </script>
 		<title>LPE - learn c++ easy!</title>
 	</head>		
-	<iframe height="66px" width="100%" src="../header.html"></iframe>
+	<header><script>$("header").load("http://lpe.myroot.zone/header.html");</script></header>
 	<body>
 		<h1>Здесь собраны уроки С++</h1>
 		<h3>Уроки по моей библиотеке Windows
@@ -19,7 +19,7 @@
 		<label>Перейти к уроку №<input type="number" id="lesson" min="0" max="99"/></label>
 		<button id="move">Ок</button><br>
 		<script>
-			for(var i=0;i<4;i++){
+			for(var i=0;i<5;i++){
 				var a=$("<a href='lesson"+i+".html' id='a"+i+"'></a>").html("Урок №"+i);
 				a.css("paddingLeft",i<10?"27px":"20px");
 				$("body").append(a);

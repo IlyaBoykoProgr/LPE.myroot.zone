@@ -45,5 +45,5 @@ kbd{
 article{
 	background: linear-gradient(grey,white,gray);
 }article::before{
-	content: "Для тех, кто не совсем понимает: \n"
+	content: "Дополнение"
 }

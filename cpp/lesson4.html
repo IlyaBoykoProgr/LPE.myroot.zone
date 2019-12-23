@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="keywords" content="с нуля,учить,уроки,LPE,lpe,c++,с++"/>
+		<link href="../site.css" rel="stylesheet"/>
+		<script src="https://code.jquery.com/jquery-3.0.0.min.js"> </script>
+		<title>LPE - learn c++ easy!</title>
+	</head>
+	<header><script>$("header").load("http://lpe.myroot.zone/header.html");</script></header>
+	<body>
+		<h1>Урок C++ №4</h1>
+		<h2>В этом уроке вы узнаете о</h2>
+		<h3>ветвлении в C или if-else</h3>
+		В предыдущих уроках мы писали программы, делающие одно и то же, сколько раз их не запускай.
+		В этом уроке я вам расскажу, как заставить программу выполнять разные действия: или то или другое.<br>
+		Итак, в чем суть <b>ветвления</b> - при разных условиях программа выполняет разные действия.<br>
+		Мы можем написать программу, выводящую то же число, что пользователь и вводит. Например:
+		
+		<blockquote><ol><li><font color="#339900">#include&lt;iostream&gt;</font></li><li>&nbsp;</li><li><font color="#0000ff">int</font>&nbsp;main<font color="#008000">&#40;</font><font color="#008000">&#41;</font><font color="#008000">&#123;</font></li><li>&nbsp;<font color="#0000ff">float</font>&nbsp;chislo<font color="#008080">;</font></li><li>&nbsp;std<font color="#008080">::</font><font color="#0000dd">cout</font><font color="#000080">&lt;&lt;</font><font color="#FF0000">&quot;Please&nbsp;enter&nbsp;a&nbsp;number:&nbsp;<font color="#000099">\n</font>&quot;</font><font color="#008080">;</font></li><li>&nbsp;<font color="#666666">//&nbsp;&quot;\n&quot;&nbsp;значит&nbsp;переход&nbsp;на&nbsp;строку</font></li><li>&nbsp;std<font color="#008080">::</font><font color="#0000dd">cin</font><font color="#000080">&gt;&gt;</font>chislo<font color="#008080">;</font></li><li>&nbsp;std<font color="#008080">::</font><font color="#0000dd">cout</font><font color="#000080">&lt;&lt;</font><font color="#FF0000">&quot;You&nbsp;have&nbsp;just&nbsp;entered&nbsp;&quot;</font><font color="#000080">&lt;&lt;</font>chislo<font color="#008080">;</font></li><li><font color="#008000">&#125;</font></li></ol></blockquote>
+		
+		<small>Код идущий после символов // не считается компилятором за инструкцию и называется комментарий</small><br>
+		Попробуйте запустить этот код. Программа просит ввести число и потом его отобразит.<br>
+		<img src="./lesson4pic1.png" title="Вывод может быть аналогичен этому"/><br>
+		
+		<div class="advanced">
+			Программа требует число от пользователя и записывает это число в переменную.<br>
+			Тип переменной float гласит, что переменная chislo дробная.<br>
+			После ввода переменная chislo выводится на екран с помощью std::cout;
+		</div>
+		<h3>Инструкция if</h3>
+		Давайте узнаем, больше ли число, введенное пользователем, чем 10. Если да, то сообщим об этом пользователю.<br>
+		Получится ветвление программы: если chislo>10 то мы выводим информацию, а если нет, то программа небудет ничего выполнять.
+		На языке C++ это будет выглядеть прямо так:
+		
+		<blockquote><ol><li><font color="#0000ff">if</font><font color="#008000">&#40;</font>&nbsp;chislo<font color="#000080">&gt;</font><font color="#0000dd">10</font>&nbsp;<font color="#008000">&#41;</font><font color="#008000">&#123;</font>сообщение<font color="#008080">;</font><font color="#008000">&#125;</font></li></ol></blockquote>
+		
+		Это просто понять: <b>if</b> переводится как "если"; в скобках указывается условие;
+		затем идет составная инструкция, которая выполнится если выполнится и условие.<br>
+		<ul class="advanced">
+			Вот список всех условий:
+			<li>переменная > значение - больше ли переменная чем значение?</li>
+			<li>переменная < значение - меньше ли переменная чем значение?</li>
+			<li>переменная == значение - равна ли переменная значению?</li>
+			<b>Тут обратите особое внимание</b>: двойное равно == это условие, а = это оператор присваивания и к проверке условия он значения не имеет.
+			<li>переменная != значение - не равна ли переменная значению?</li>
+			<li>переменная &gt;= значение - больше или равна ли переменная значению?</li>
+			<li>переменная &lt;= значение - меньше или равна ли переменная значению?</li>
+		</ul>
+		Давайте рассмотрим эту программу:
+		
+		<blockquote><ol><li><font color="#339900">#include&lt;iostream&gt;</font></li><li>&nbsp;</li><li><font color="#0000ff">int</font>&nbsp;main<font color="#008000">&#40;</font><font color="#008000">&#41;</font><font color="#008000">&#123;</font></li>
+		<li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">float</font>&nbsp;chislo<font color="#008080">;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;std<font color="#008080">::</font><font color="#0000dd">cout</font><font color="#000080">&lt;&lt;</font><font color="#FF0000">&quot;Enter&nbsp;a&nbsp;number:&nbsp;<font color="#000099">\n</font>&quot;</font><font color="#008080">;</font></li>
+		<li>&nbsp;&nbsp;&nbsp;&nbsp;std<font color="#008080">::</font><font color="#0000dd">cin</font><font color="#000080">&gt;&gt;</font>chislo<font color="#008080">;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">if</font><font color="#008000">&#40;</font>chislo<font color="#000080">&gt;</font><font color="#0000dd">10</font><font color="#008000">&#41;</font><font color="#008000">&#123;</font>std<font color="#008080">::</font>
+		<font color="#0000dd">cout</font><font color="#000080">&lt;&lt;</font>chislo<font color="#000080">&lt;&lt;</font><font color="#FF0000">&quot;&nbsp;is&nbsp;bigger&nbsp;than&nbsp;10&quot;</font><font color="#008080">;</font><font color="#008000">&#125;</font></li>
+		<li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">if</font><font color="#008000">&#40;</font>chislo<font color="#000080">&lt;</font><font color="#0000dd">10</font><font color="#008000">&#41;</font><font color="#008000">&#123;</font>std<font color="#008080">::</font><font color="#0000dd">cout</font><font color="#000080">&lt;&lt;</font>chislo<font color="#000080">&lt;&lt;</font><font color="#FF0000">&quot;&nbsp;is&nbsp;smaller&nbsp;than&nbsp;10&quot;</font>
+		<font color="#008080">;</font><font color="#008000">&#125;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">if</font><font color="#008000">&#40;</font>chislo<font color="#000080">==</font><font color="#0000dd">10</font><font color="#008000">&#41;</font><font color="#008000">&#123;</font>std<font color="#008080">::</font><font color="#0000dd">cout</font><font color="#000080">&lt;&lt;</font>chislo<font color="#000080">&lt;&lt;</font>
+		<font color="#FF0000">&quot;&nbsp;is&nbsp;equal&nbsp;to&nbsp;10&quot;</font><font color="#008080">;</font><font color="#008000">&#125;</font></li><li><font color="#008000">&#125;</font></li><li>&nbsp;</li></ol></blockquote>
+		
+		<p class="advanced">
+			if(chislo==10){инструкция;}<br>
+			можно заменить без ошибки компилятора на <br>
+			if(chislo==10)инструкция;<br>
+			Действительно, зачем писать составную нструкцию, если в ее состав входит всего одна инструкция.
+		</p>
+		Итак, мои картинки:<br>
+		<img src="lesson4pic2.png"/>
+		<h3>Инструкция if-else</h3>
+		Вы поняли инструкцию if. Осталось рассказать одну её возможность:
+		если написать
+		
+		<blockquote><ol><li><font color="#0000ff">if</font><font color="#008000">&#40;</font>условие<font color="#008000">&#41;</font><font color="#008000">&#123;</font><font color="#008000">&#125;</font></li><li><font color="#0000ff">else</font><font color="#008000">&#123;</font><font color="#008000">&#125;</font></li></ol></blockquote>
+		
+		то в составной инструкции с именем else код будет выполнятся, если 
+		не выполнился в блоке if. Например if(a==10){что-то;}else{} , где 
+		else выполнится при a!=10.
+		<div class="advanced">
+			На всякий случай расскажу вам данную информацию:<br>
+			если после подключения библиотеки iostream указать
+			
+			<blockquote><ol><li><font color="#0000ff">using</font>&nbsp;<font color="#0000ff">namespace</font>&nbsp;std<font color="#008080">;</font></li></ol></blockquote>
+			
+			то вам не надо будет писать std:: каждый раз!
+		</div>
+		Урок окончен. Попробуйте написать свою программу, использующую 
+		ветвление, да пусть у вас все получится!
+	</body>
+	<footer>
+		<hr>
+		<a href="./lesson.html"><< Предыдущий урок</a>
+		<a href="./lesson.html">Следующий урок>></a>
+		<br><a href="./index.html">Все уроки</a>
+	</footer>
+</html>
