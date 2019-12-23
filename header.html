@@ -24,7 +24,7 @@
 	
 	$(document).ready(function(){
 		$(".advanced").wrap("<article></article>").click(function(){
-			$(this).slideToggle(500);
-		});
+			$(this).slideToggle("slow");
+		}).trigger("click");
 	});
 </script>
