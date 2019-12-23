@@ -23,8 +23,9 @@
 	});
 	
 	$(document).ready(function(){
-		$(".advanced").wrap("<article></article>").click(function(){
-			$(this).slideToggle("slow");
+		$(".advanced").wrap("<article></article>");
+		$(".advanced").parent().click(function(){
+			$(this).children().slideToggle("slow");
 		}).trigger("click");
 	});
 </script>
