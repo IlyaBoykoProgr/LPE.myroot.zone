@@ -11,6 +11,13 @@
 	</head>
 	<header><script>$("header").load("http://lpe.myroot.zone/header.html");</script></header>
 	<body>
+		<div id="cube" style="transform:rotateX(20deg) rotateY(18deg);width:80px;height:80px;">
+			<div style="transform:rotateX(0deg) rotateY(0deg);background:#F0FA"></div>
+			<div style="transform:rotateX(-90deg) rotateY(0deg);transform-origin: center bottom;background:#F00C"></div>
+			<div style="transform:rotateX(90deg) rotateY(0deg);transform-origin: center top;background:#0F0C"></div>
+			<div style="transform:rotateX(0deg) rotateY(90deg);transform-origin: center right;background:#00FC"></div>
+			<div style="transform:rotateX(0deg) rotateY(-90deg);transform-origin: center left;background:#FF0C"></div>
+		</div>
 		<h1>Добро пожаловать!</h1>
 		<h3>Если хотите начать разрабатывать с нуля - вам сюда!</h5>
 		<ul>Программирование:
@@ -29,10 +36,13 @@
 		<script>
 			$("body").slideUp(1).slideDown(6000);
 			document.body.onbeforeunload=function(){
-					$("body").slideUp(300);
+				$("body").slideUp(300);
 			};
 			$("h1").click(function(){
-					$(this).animate({paddingTop:"+=50px"}).animate({paddingTop:"-=50px"});
+				$(this).animate({paddingTop:"+=50px"}).animate({paddingTop:"-=50px"});
+			});
+			$("#cube").click(function(){
+				$(this).children().animate({padding:"+=10px"});
 			});
 		</script>
 	</body>
